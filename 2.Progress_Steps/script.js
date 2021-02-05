@@ -5,25 +5,27 @@ const circle = document.querySelectorAll('.circle');
 
 let currentActive = 1;
 
-prev.addEventListener('click', () => {
-    currentActive--
-
-    if (currentActive < 1) {
-        currentActive = 1;
-    }
-    update();
-
-})
-
-
 next.addEventListener('click', () => {
     currentActive++
 
     if (currentActive > circle.length) {
         currentActive = circle.length;
     }
+    console.log(currentActive);
+
+
     update();
 
+})
+
+prev.addEventListener('click', () => {
+    currentActive--
+
+    if (currentActive < 1) {
+        currentActive = 1;
+    }
+
+    update();
 
 })
 
@@ -31,12 +33,14 @@ next.addEventListener('click', () => {
 function update() {
     circle.forEach((circle, index) => {
         if (index < currentActive) {
+            console.log(index)
             circle.classList.add('active');
         } else {
             circle.classList.remove('active');
         }
     })
     const actives = document.querySelectorAll('.active');
+    console.log(actives.length, circle.length);
     progress.style.width = (actives.length - 1) / (circle.length - 1) * 100 + '%';
 
     if (currentActive === 1) {
