@@ -8,11 +8,7 @@ counters.forEach(counter => {
     const updateCounter = () => {
         const target = +counter.getAttribute('data-target');
         const c = +counter.innerText
-        console.log(c)
-        // console.log(typeof target, target)
-
-        const increment = target / 100
-
+        const increment = target / 100;
 
         if (c < target) {
             counter.innerText = `${Math.ceil(c + increment)}`
@@ -24,3 +20,9 @@ counters.forEach(counter => {
 
     updateCounter()
 })
+
+//Todo:
+//*sdfsdfsd
+//?dasdsa
+// !adasd
+//@sadda
