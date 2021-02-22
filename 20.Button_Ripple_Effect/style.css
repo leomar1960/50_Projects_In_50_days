@@ -25,7 +25,7 @@ button{
     letter-spacing: 2px;
     padding: 20px 30px;
     border-radius: 3px;
-    /* overflow: hidden; */
+    overflow: hidden;
     margin: 10px 0;
     position: relative;
     cursor: pointer;
@@ -46,7 +46,7 @@ button .circle{
 
 @keyframes scale{
     to{
-    transform: translate(-50%, -50%) scale(13);
+    transform: translate(-50%, -50%) scale(3);
     opacity: 0;
 
     }
