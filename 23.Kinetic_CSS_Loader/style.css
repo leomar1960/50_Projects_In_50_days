@@ -22,7 +22,7 @@ body{
     border:  1px solid pink;
 }
 
-.kinetic::before, .kinetic::after{
+.kinetic::before{
  content: '';
  position: absolute;
  top: 0;
@@ -32,6 +32,17 @@ body{
  border-bottom-color: #fff ;
 animation: rotateA 2s linear infinite 0.5s; 
 }
+
+.kinetic::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;   
+    width: 0;
+    border: 50px solid transparent;
+    border-bottom-color:black ;
+   animation: rotateA 2s linear infinite 0.5s; 
+   }
 
 .kinetic::before{
     transform: rotate(90deg);
